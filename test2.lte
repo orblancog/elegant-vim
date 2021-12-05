@@ -1,0 +1,20 @@
+!  *** Define elements ***
+
+! Quads
+"string"
+dscatter
+
+Q1 : quad,l=0.25,k1=1.0
+Q2 : quad,l=0.25,k1=-1.0
+
+! Drifts
+D0 : drif, l=0.5
+D1 : drif, l=2.0
+
+! Bend
+B1 : sben,l=1.0, angle=0.314159, e1=0, e2=0
+
+! Build beamline
+BL : line=(D0,Q1,D0,Q2,B1,D1)
+RING : line=(20*BL)
+
