@@ -10,8 +10,12 @@ syntax on
 
 2) Copy from this repository the file "elegant.vim", containing the syntax definition, inside ~/.vim/syntax
 
-3) Inside ~/.vim/ftdetect do:
-echo "au BufNewFile,BufRead *.lte,*.ele set filetype=elegant" > elegant.vim
+3) add the line
+```
+  au BufNewFile,BufRead *.lte,*.ele set filetype=elegant
+```
+ to your ~/.vimrc file, or create ~/.vim/ftdetect/elegant.vim
+
 
 NOTES: a) if .vimrc does not exist, create one
        b) if the ftdetect does not exist, create one
