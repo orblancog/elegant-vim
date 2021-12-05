@@ -8,7 +8,7 @@ To install it:
 1) On your ~/.vimrc add
 syntax on
 
-2) Copy from this repository the file "elegant.vim", containing the syntax definition, inside ~/.vim/syntax
+2) Copy from this repository the file "elegant.vim", containing the syntax definition, inside ~/.vim/syntax/
 
 3) add the line
 ```vim
