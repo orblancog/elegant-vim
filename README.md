@@ -11,7 +11,7 @@ syntax on
 2) Copy from this repository the file "elegant.vim", containing the syntax definition, inside ~/.vim/syntax
 
 3) add the line
-```
+```vim
   au BufNewFile,BufRead *.lte,*.ele set filetype=elegant
 ```
  to your ~/.vimrc file, or create ~/.vim/ftdetect/elegant.vim
