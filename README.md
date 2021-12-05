@@ -6,7 +6,9 @@ Tested on VIM 8.2.
 
 To install it:
 1) On your ~/.vimrc add
+```vim
 syntax on
+```
 
 2) Copy from this repository the file "elegant.vim", containing the syntax definition, inside ~/.vim/syntax/
 
