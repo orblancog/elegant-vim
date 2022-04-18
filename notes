@@ -8,3 +8,10 @@ https://learnvim.irian.to/vimscript/vimscript_functions
 
 https://learnvimscriptthehardway.stevelosh.com/chapters/26.html
 
+
+notes edition in vim
+:'<,'>s/ //
+:'<,'>s,^,\\,
+:'<,'>s/$/ /
+:'<,'>s/;/,/
+
