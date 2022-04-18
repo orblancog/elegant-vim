@@ -12,17 +12,17 @@ testing completion for parameters based on previous function.
 # Usage
 The highlighting mode is automatically activated when the file ends in .ele or .lte.
 
-## autocomplete the function name: & CTRL+O
-To autocomplete the name of a function, type "&" and then type CTRL+O, a submenu will be display with the matching options.
+## autocomplete the function name: & CTRL+o
+To autocomplete the name of a function, type "&" and then type CTRL+o, a submenu will be display with the matching options.
 ```vim
-&"CTRL+0"
+&"CTRL+o"
 ```
 The lists gets refined if you type "&" and the first characters of the function name, e.g.
 ```vim
-&tune"CTRL+0"
+&tune"CTRL+o"
 ```
-## autocomplete function parameters: CTR+U
-To autocomplete the parameters of a function, put the cursor anywhere below the last function call that starts with &, and type "CTRL+U"
+## autocomplete function parameters: CTR+u
+To autocomplete the parameters of a function, put the cursor anywhere below the last function call that starts with &, and type "CTRL+u"
 
 
 
