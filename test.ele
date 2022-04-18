@@ -1,5 +1,16 @@
 ! comment
 
+&alter_elements
+item
+itemdifferential
+&end
+
+&amplification_factors
+
+:q
+kick_function
+
+
 &run_setup
 &end
 string sf = null
