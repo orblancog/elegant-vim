@@ -3,9 +3,63 @@
 " https://vi.stackexchange.com/questions/4584/how-to-create-my-own-autocomplete-function
 
 
-let s:m01="name item type exclude value string_value differential multiplicative alter_at_each_step alter_before_load_parameters verbose allow_missing_elements allow_missing_parameters start_ocurrence s_start s_end before after"
-let s:m02="output uncorrected_orbit_function kick_function name type item plane change number_to_do maximum_z"
-let s:m03="output output_order printout printout_format printout_order delta_x delta_xp delta_y delta_yp delta_s delta_dp accuracy_factor center_on_orbit verbosity canonical_variables periodic beta_x alpha_x eta_x etap_x beta_y alpha_y eta_y etap_y n_points max_fit_order"
+let s:alter_elements="name=NULL; 
+\item=NULL; 
+\type=NULL; 
+\exclude=NULL; 
+\value=0; 
+\string_value=NULL; 
+\differential=0; 
+\multiplicative=0; 
+\alter_at_each_step=0; 
+\alter_before_load_parameters=0; 
+\verbose=0; 
+\allow_missing_elements=0; 
+\allow_missing_parameters=0; 
+\start_occurence=0; 
+\end_occurence=0; 
+\s_start=-1; 
+\s_end=-1; 
+\before=NULL; 
+\after=NULL;"
+let s:amplification_factors="output=NULL; 
+\uncorrected_orbit_function=NULL; 
+\corrected_orbit_function=NULL; 
+\kick_function=NULL; 
+\name=NULL; 
+\type=NULL; 
+\item=NULL; 
+\plane=NULL; 
+\change=1e-3; 
+\number_to_do=-1; 
+\maximum_z=0;"
+let s:analyze_map="output=NULL; 
+\output_order=1; 
+\printout=NULL; 
+\printout_format="%22.15e "; 
+\printout_order=2; 
+\delta_x=5e-5; 
+\delta_xp=5e-5; 
+\delta_y=5e-5; 
+\delta_yp=5e-5; 
+\delta_s=5e-5; 
+\delta_dp=5e-5; 
+\accuracy_factor=1e-12; 
+\center_on_orbit=0; 
+\verbosity=0; 
+\canonical_variables=0; 
+\periodic=1; 
+\beta_x=1; 
+\alpha_x=0; 
+\eta_x=0; 
+\etap_x=0; 
+\beta_y=1; 
+\alpha_y=0; 
+\eta_y=0; 
+\etap_y=0; 
+\n_points=9; 
+\max_fit_order=8;"
+
 let s:m04="input periodic persistent disable"
 let s:m05="bunch n_particles_per_bunch time_start matched_to_cell emit_x emit_nx beta_x alpha_x eta_x etap_x emit_y emit_ny beta_y alpha_y eta_y etap_y use_twiss_command_values use_moments_output_values Po sigma_dp sigma_s dp_s_coupling emit_z beta_z alpha_z momentum_chirp one_random_bunch symmetrize halton_sequence[3] halton_radix[6] optimized_halton randomized_order[3] limit_invariants limit_in_4d enforce_rms_values[3] distribution_cutoff[3] distribution_type[3] centroid[6] first_is_fiducial save_initial_coordinates"
 let s:m06="bunch n_particles_per_bunch use_moments_output_values S1_beta S2_beta S12_beta S16 S26 S3_beta S4_beta S34_beta S36 S46 S5 S6 S56 time_start Po one_random_bunch save_initial_coordinates limit_invariants symmetrize halton_sequence[3] halton_radix[6] optimized_halton randomize_order[3] limit_in_4d enforce_rms_values[3] distribution_cutoff distribution_type[3] centroid[6] first_is_fiducial"
@@ -29,7 +83,8 @@ let s:m23="inhibit_fsync allow_overwriting echo_namelists mpi_randomization_mode
 let s:m24="name type exclude disable clear completely"
 let s:m25="losses output log_file k_min momentum_aperture momentum_aperture_scale momentum_aperture_periodicity n_k s_start s_end include_name_pattern include_type_pattern verbosity soft_failure allow_watch_file_output"
 let s:m26="name type exclude s_start s_end skip disable insert_before add_at_end add_at_start element_def total_ocurrences occurrence[100]"
-
+let s:m27="name type exclude disable clear element_prefix skip vertical horizontal nonlinear uniform_distribution verbosity averaging_factor"
+let s:m28="pressure_profile pressure_factor ion_properties beam_output beam_output_all_locations ion_density_output ion_output_all_locations ion_species_output ion_output_interval field_calculation_method gaussian_ion_range distribution_fit_target distribution_fit_tolerance distribution_fit_evaluations distribution_fit_passes distribution_fit_restarts hybrid_simplex_comparison_interval fit_residual_type macro_ions symmetrize generation_interval multiple_ionization_interval multiple_ionization_energy_peak multiple_ionization_energy_rms ion_span[2] ion_bin_divisor[2] ion_range_multiplier[2] ion_sigma_limit_multiplier[2] ion_histogram_max_bins ion_histogram_min_per_bin ion_histogram_output  "
 let s:commands="
 \alter_elements 
 \amplification_factors 
@@ -56,10 +111,12 @@ let s:commands="
 \global_settings
 \ignore_elements
 \inelastic_scattering
-\insert_elements"
+\insert_elements
+\insert_sceffects
+\ion_effects"
 let s:cparam=[
-\s:m01,
-\s:m02,
+\s:alter_elements,
+\s:amplification_factors,
 \s:m03,
 \s:m04,
 \s:m05,
