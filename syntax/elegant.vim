@@ -1,17 +1,15 @@
 " Vim syntax file
 " Language    :  elegant 
 " Maintainer  :  orblancog <orblancog@gmail.com>
-" Version     :  0.1
+" Version     :  2021.12.05
 " Last Change :  2021 dec 05
 
 
 " Usage:
 "
-" add the line
-"   au BufNewFile,BufRead *.lte,*.ele set filetype=elegant
-" to your ~/.vimrc file, or create ~/.vim/ftdetect/elegant.vim
-
-
+" add in .vimrc the line
+" au BufNewFile,BufRead *.ele,*.tle setf elegant
+"
 
 if exists("b:current_syntax")
 	finish
@@ -51,6 +49,7 @@ syntax match elegantCommand  /\V&aperture_data/
 syntax match elegantCommand  /\V&bunched_beam/
 syntax match elegantCommand  /\V&bunched_beam_moments/
 syntax match elegantCommand  /\V&change_particle/
+syntax match elegantCommand  /\V&change_start/
 syntax match elegantCommand  /\V&chaos_map/
 syntax match elegantCommand  /\V&chromaticity/
 syntax match elegantCommand  /\V&closed_orbit/
@@ -99,6 +98,7 @@ syntax match elegantCommand  /\V&slice_analysis/
 syntax match elegantCommand  /\V&subprocess/
 syntax match elegantCommand  /\V&steering_element/
 syntax match elegantCommand  /\V&transmute_elements/
+syntax match elegantCommand  /\V&touschek_scatter/
 syntax match elegantCommand  /\V&tune_footprint/
 syntax match elegantCommand  /\V&twiss_analysis/
 syntax match elegantCommand  /\V&twiss_output/
