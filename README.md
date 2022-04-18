@@ -21,7 +21,7 @@ The lists gets refined if you type "&" and the first characters of the function 
 ```vim
 &tune"CTRL+o"
 ```
-## autocomplete function parameters: CTR+u
+## autocomplete function parameters: CTRL+u
 To autocomplete the parameters of a function, put the cursor anywhere below the last function call that starts with &, and type "CTRL+u"
 
 
