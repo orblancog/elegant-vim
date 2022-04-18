@@ -1,8 +1,15 @@
 orblancog
-2021dic05
+2022apr18
 
 elegant highlighting for vim.
 Tested on VIM 8.2.
+
+
+testing completion for parameters based on previous function.
+
+# Version
+0.1 2021dec05 first release
+    
 
 To install it:
 1) On your ~/.vimrc add
