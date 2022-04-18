@@ -1,15 +1,52 @@
 ! comment
+&chromaticity
+-1
+&chaos_map
+xmax=0.1;8-1
+&change_start
+element_name=NULL;ring_mode=0;
 
 &alter_elements
+item=NULL;i0
+-1-1
 item
 itemdifferential
-&end
+s_start=-1;
 
 &amplification_factors
-
+corrected_orbit_function=NULL;
+maximum_z=0;plane=NULL;
+1
+1
+-1:
 :q
-kick_function
+kick_functiion
+1
+uncorrected_orbit_function=NULL;
+&analyze_map
+2
+canonical_variables=0;
+printout=NULL;
 
+&aperture_data
+persistent=0;3
+persistent=0;
+ibscatterb
+&bunched_beam
+time_start=0;
+randomize_order[3]={0,0,0};
+i
+&bunched_beam_moments
+use_moments_output_values=0;
+&bunched_beam_moments
+S12_beta=0;
+
+&change_particle
+-1
+charge_ratio=0;6
+
+
+&change_s
 
 &run_setup
 &end
