@@ -1274,7 +1274,7 @@ function! elegantcomplete#CompleteParams(findstart, base)
         let indxcom = elegantcomplete#elegantCommandCheck()
         let lencommands = len(split(s:commands))
         "" add index for debugging only
-	call add(res,indxcom)
+	"call add(res,indxcom)
 	if indxcom >= 0 && indxcom < lencommands
             for m in split(s:cparam[indxcom])
                 if m =~ '^' . a:base
