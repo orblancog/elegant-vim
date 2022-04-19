@@ -1,10 +1,18 @@
-" oscar blanco
+" Vim syntax file
+" Language    :  elegant 
+" Maintainer  :  orblancog <orblancog@gmail.com>
+" Version     :  0.3
+" Last Change :  2022 apr 19
+
+" Usage:
+" https://github.com/orblancog/elegant-vim
+"
 " this code creates the parameter autocompletion 
 " for the elegant particle accelerator code
 " https://ops.aps.anl.gov/manuals/elegant_latest/elegant.html
 "
 " orblancog@gmail.com 2022apr18
-" NOTE : list of parameters separated by spaces 
+" NOTE : the list of parameters is separated by spaces 
 "        WARNING, spaces are not visible, do not remove
 "
 let s:commands=""
@@ -159,7 +167,7 @@ let s:bunched_beam_moments="
 \limit_in_4d=0, 
 \enforce_rms_values[3]={0,0,0}, 
 \distribution_cutoff[3]={2,2,2}, 
-\distribution_type[3]=gaussian...
+\distribution_type[3]=gaussian... 
 \centroid[6]={0.0,0.0,0.0,0.0,0.0,0.0}, 
 \first_is_fiducial=0," 
 let s:commands=join([s:commands,"bunched_beam_moments"]," ")
@@ -250,7 +258,7 @@ let s:correct="
 \corrector_limit[2]={0,0}, 
 \correction_fraction[2]={1,1}, 
 \correction_accuracy[2]={1e-6,1e-6}, 
-\do_correction[2]={1, 1}, 
+\do_correction[2]={1,1}, 
 \remove_smallest_SVs[2]={0,0}, 
 \keep_largest_SVs[2]={0,0}, 
 \minimum_SV_ratio[2]={0,0}, 
@@ -285,7 +293,7 @@ let s:correct="
 let s:commands=join([s:commands,"correct"]," ")
 call add(s:cparam,s:correct)
 
-let s:corrector_matrix_output=" 
+let s:correction_matrix_output=" 
 \response[4]=NULL,NULL, 
 \inverse[2]=NULL,NULL, 
 \KnL_units=0, 
@@ -295,8 +303,8 @@ let s:corrector_matrix_output="
 \fixed_length=0, 
 \coupled=0, 
 \use_response_from_computed_orbits=0," 
-let s:commands=join([s:commands,"corrector_matrix_output"]," ")
-call add(s:cparam,s:corrector_matrix_output)
+let s:commands=join([s:commands,"correction_matrix_output"]," ")
+call add(s:cparam,s:correction_matrix_output)
 
 let s:correct_tunes=" 
 \quadrupoles=NULL, 
@@ -561,9 +569,9 @@ let s:ion_effects="
 \ion_span[2]={0,0}, 
 \ion_bin_divisor[2]={10.0,10.0}, 
 \ion_range_multiplier[2]={2.0,2.0}, 
-\ion_sigma_limit_multiplier[2]={0,0},
-\longion_histogram_max_bins=1000, 
-\longion_histogram_min_per_bin=5, 
+\ion_sigma_limit_multiplier[2]={0,0}, 
+\ion_histogram_max_bins=1000, 
+\ion_histogram_min_per_bin=5, 
 \ion_histogram_output=NULL, 
 \ion_histogram_output_s_start=-1, 
 \ion_histogram_output_s_end=-1, 
@@ -592,9 +600,9 @@ let s:commands=join([s:commands,"linear_chromatic_tracking_setup"]," ")
 call add(s:cparam,s:linear_chromatic_tracking_setup)
 
 let s:link_control=" 
-\longclear_links=1, 
-\longsummarize_links=0, 
-\longverbosity=0, "
+\clear_links=1, 
+\summarize_links=0, 
+\verbosity=0, "
 let s:commands=join([s:commands,"link_control"]," ")
 call add(s:cparam,s:link_control)
 
@@ -661,7 +669,7 @@ let s:modulate_elements="
 \expression=NULL, 
 \filename=NULL, 
 \time_column=NULL, 
-\convert_pass_to_time,
+\convert_pass_to_time, 
 \amplitude_column=NULL, 
 \refresh_matrix=0, 
 \differential=1, 
@@ -680,30 +688,30 @@ let s:commands=join([s:commands,"modulate_elements"]," ")
 call add(s:cparam,s:modulate_elements)
 
 let s:moments_output=" 
-\STRINGfilename=NULL, 
-\longoutput_at_each_step=0, 
-\longoutput_before_tune_correction=0, 
-\longfinal_values_only=0, 
-\longverbosity=0, 
-\longmatched=1, 
-\longequilibrium=1, 
-\longradiation=1, 
-\longn_slices=10, 
-\longtracking_based_diffusion_matrix_particles=1000, 
-\longslice_etilted=1, 
-\doubleemit_x=0, 
-\doublebeta_x=0, 
-\doublealpha_x=0, 
-\doubleeta_x=0, 
-\doubleetap_x=0, 
-\doubleemit_y=0, 
-\doublebeta_y=0, 
-\doublealpha_y=0, 
-\doubleeta_y=0, 
-\doubleetap_y=0, 
-\doubleemit_z=0, 
-\doublebeta_z=0, 
-\doublealpha_z=0, " 
+\filename=NULL, 
+\output_at_each_step=0, 
+\output_before_tune_correction=0, 
+\final_values_only=0, 
+\verbosity=0, 
+\matched=1, 
+\equilibrium=1, 
+\radiation=1, 
+\n_slices=10, 
+\tracking_based_diffusion_matrix_particles=1000, 
+\slice_etilted=1, 
+\emit_x=0, 
+\beta_x=0, 
+\alpha_x=0, 
+\eta_x=0, 
+\etap_x=0, 
+\emit_y=0, 
+\beta_y=0, 
+\alpha_y=0, 
+\eta_y=0, 
+\etap_y=0, 
+\emit_z=0, 
+\beta_z=0, 
+\alpha_z=0, " 
 let s:commands=join([s:commands,"moments_output"]," ")
 call add(s:cparam,s:moments_output)
 
@@ -887,14 +895,14 @@ let s:commands=join([s:commands,"rf_setup"]," ")
 call add(s:cparam,s:rf_setup)
 
 let s:replace_elements=" 
-\STRINGname=NULL, 
-\STRINGtype=NULL, 
-\STRINGexclude=NULL, 
-\longskip=1, 
-\longdisable=0, 
-\STRINGelement_def=NULL, 
-\longtotal_occurrences=0, 
-\longoccurrence[100]={0}, "
+\name=NULL, 
+\type=NULL, 
+\exclude=NULL, 
+\skip=1, 
+\disable=0, 
+\element_def=NULL, 
+\total_occurrences=0, 
+\occurrence[100]={0}, "
 let s:commands=join([s:commands,"replace_elements"]," ")
 call add(s:cparam,s:replace_elements)
 
@@ -1083,10 +1091,10 @@ let s:touschek_scatter="
 \distribution=NULL, 
 \initial=NULL, 
 \output=NULL, 
-\longnbins=100, 
-\doublesbin_step=1, 
-\longn_simulated=5000000, 
-\doubleignored_portion= 0.01, 
+\nbins=100, 
+\sbin_step=1, 
+\n_simulated=5000000, 
+\ignored_portion= 0.01, 
 \i_start=0, 
 \i_end=1, 
 \do_track=0, 
@@ -1128,7 +1136,7 @@ let s:tune_footprint="
 \immediate=0 
 \filtered_output=1, 
 \ignore_half_integer=0, "
-let s:commands=join([s:commands,"tune_fooprint"]," ")
+let s:commands=join([s:commands,"tune_footprint"]," ")
 call add(s:cparam,s:tune_footprint)
 
 let s:twiss_analysis=" 
@@ -1263,8 +1271,8 @@ function! elegantcomplete#CompleteParams(findstart, base)
     if a:findstart
         " locate the start of the word
         let line = getline('.')
-        let start = col('.') - 1
-        while start > 0 && (line[start - 1] =~ '\a' || line[start - 1] =~ '.' || line[start - 1] =~ '-' || line[start - 1] =~ '_')
+        let start = col('.') - 1 
+        while start > 0 &&  line[start - 1] =~ '\S'
             let start -= 1
         endwhile
         return start
@@ -1275,6 +1283,7 @@ function! elegantcomplete#CompleteParams(findstart, base)
         let lencommands = len(split(s:commands))
         "" add index for debugging only
 	"call add(res,indxcom)
+	"call add(res,a:base)
 	if indxcom >= 0 && indxcom < lencommands
             for m in split(s:cparam[indxcom])
                 if m =~ '^' . a:base
