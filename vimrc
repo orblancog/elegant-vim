@@ -1,7 +1,7 @@
 " syntax highlighting
 syntax on
 " filetype and completion
-filetype plugin on
+" filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 ""autocmd BufReadPost * call elegantcomplete#jump
