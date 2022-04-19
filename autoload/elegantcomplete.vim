@@ -2,19 +2,41 @@
 " Language    :  elegant 
 " Maintainer  :  orblancog <orblancog@gmail.com>
 " Version     :  0.3
-" Last Change :  2022 apr 19
+" Last Change :  2022 apr 20
 
 " Usage:
 " https://github.com/orblancog/elegant-vim
 "
+" History
+" v0.1 2021dec   first release
+" v0.2 2022apr19 test
+" v0.3 2022apr20 release
+
 " this code creates the parameter autocompletion 
 " for the elegant particle accelerator code
 " https://ops.aps.anl.gov/manuals/elegant_latest/elegant.html
 "
-" orblancog@gmail.com 2022apr18
+" This file is not part of vim
+
+" This program is free software: you can redistribute it and/or modify
+" it under the terms of the GNU General Public License as published by
+" the Free Software Foundation, either version 3 of the License, or
+" (at your option) any later version.
+
+" This program is distributed in the hope that it will be useful,
+" but WITHOUT ANY WARRANTY; without even the implied warranty of
+" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+" GNU General Public License for more details.
+
+" You should have received a copy of the GNU General Public License
+" along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+
 " NOTE : the list of parameters is separated by spaces 
 "        WARNING, spaces are not visible, do not remove
 "
+
 let s:commands=""
 let s:cparam=[]
 let s:alter_elements=" 

@@ -1,15 +1,33 @@
 " Vim syntax file
 " Language    :  elegant 
 " Maintainer  :  orblancog <orblancog@gmail.com>
-" Version     :  2021.12.05
-" Last Change :  2021 dec 05
-
+" Version     :  0.3
+" Last Change :  2022 apr 20
 
 " Usage:
+" https://github.com/orblancog/elegant-vim
 "
-" add in .vimrc the line
-" au BufNewFile,BufRead *.ele,*.tle setf elegant
-"
+" History
+" v0.1 2021dec   first release
+" v0.2 2022apr19 test
+" v0.3 2022apr20 release
+
+" This file is not part of vim
+
+" This program is free software: you can redistribute it and/or modify
+" it under the terms of the GNU General Public License as published by
+" the Free Software Foundation, either version 3 of the License, or
+" (at your option) any later version.
+
+" This program is distributed in the hope that it will be useful,
+" but WITHOUT ANY WARRANTY; without even the implied warranty of
+" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+" GNU General Public License for more details.
+
+" You should have received a copy of the GNU General Public License
+" along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
 
 if exists("b:current_syntax")
 	finish
